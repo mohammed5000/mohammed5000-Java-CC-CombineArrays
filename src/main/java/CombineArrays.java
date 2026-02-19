@@ -10,7 +10,10 @@ public class CombineArrays {
     public int[] combine(int[] arr1, int[] arr2){
         int[] combineArray = new int [arr1.length + arr2.length];
        for (int i = 0; i < arr1.length; ++i) {
-        combineArray[i] = arr1[i] + arr2[i];
+        combineArray[i] = arr1[i];
+       }
+       for (int i = 0; i < arr2.length; ++i) {
+        combineArray[arr1.length + i] = arr2[i];
        }
         return combineArray;
     }
